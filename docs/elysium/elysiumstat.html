@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stats</title>
+	<style>
+		input.stat-field {
+  			width: 3em;
+		}
+
+		td {
+  	         	padding: 3px;
+		}
+
+		#inputs {
+  			width: 200px;
+  			float: left;
+			}
+
+		#output {
+ 			 width: 500px;
+ 			 float: left;
+		}
+	</style>       
+    </head>
+
+    <body>
+
+	    
+	    
+        <div id="inputs">
+  <table>
+    <tr>
+      <td>
+        <label for="str">Strength</label>
+      </td>
+      <td>
+        <input id="str" class="stat-field" type="number" value="2">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="con">Constitution</label>
+      </td>
+      <td>
+        <input id="con" class="stat-field" type="number" value="2">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="dex">Dexterity</label>
+      </td>
+      <td>
+        <input id="dex" class="stat-field" type="number" value="2">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="spe">Speed</label>
+      </td>
+      <td>
+        <input id="spe" class="stat-field" type="number" value="2">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="acc">Accuracy</label>
+      </td>
+      <td>
+        <input id="acc" class="stat-field" type="number" value="2">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="ini">Initiative</label>
+      </td>
+      <td>
+        <input id="ini" class="stat-field" type="number" value="2">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="int">Intelligence</label>
+      </td>
+      <td>
+        <input id="int" class="stat-field" type="number" value="2">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="cha">Charisma</label>
+      </td>
+      <td>
+        <input id="cha" class="stat-field" type="number" value="2">
+      </td>
+    </tr>
+  </table>
+  <button onclick="draw()">Draw</button>
+  <p>Total: <span id="total"></span> points</p>
+</div>
+<div id="output">
+  <canvas id="canvas" width="500" height="500"></canvas>
+</div>
+	    
+	    
+	 <script>
+		var background = new Image();
+		background.src = "http://image.ibb.co/fB2sRR/elysium_STAT.png";
+
+		function get(name) {
+ 			 return parseInt(document.getElementById(name).value);
+		};
+
+		function x(stat) {
+  			center = document.getElementById("canvas").width / 2;
+ 			 mul = {
+ 			   "dex": 1,
+			    "spe": 0.707,
+			    "acc": 0,
+			    "ini": -0.707,
+			    "int": -1,
+			    "cha": -0.707,
+ 			   "str": 0,
+ 			   "con": 0.707
+ 	        	};
+ 			 return center + 18 * mul[stat] * get(stat);
+		};
+
+		function y(stat) {
+			  center = document.getElementById("canvas").height / 2;
+    			mul = {
+			    "dex": 0,
+			    "spe": 0.707,
+			    "acc": 1,
+			    "ini": 0.707,
+ 			    "int": 0,
+			    "cha": -0.707,
+			    "str": -1,
+			    "con": -0.707
+		 	};
+ 			return center + 18 * mul[stat] * get(stat);
+			};
+
+		function draw() {
+  			canvas = document.getElementById('canvas');
+  			c = canvas.getContext('2d');
+
+  			var sum = get("str") + get("con") + get("dex") + get("spe") + get("acc") + get("ini") + get("int") + get("cha");
+  			document.getElementById("total").innerHTML = sum;
+
+  			// Draw the background of the chart
+  			c.drawImage(background, 0, 0, canvas.width, canvas.height);
+
+  			// Draw the dark grey figure
+  			c.fillStyle = '#555';
+  			c.beginPath();
+  			c.moveTo(x("dex"), y("dex"));
+  			c.lineTo(x("spe"), y("spe"));
+  			c.lineTo(x("acc"), y("acc"));
+  			c.lineTo(x("ini"), y("ini"));
+  			c.lineTo(x("int"), y("int"));
+  			c.lineTo(x("cha"), y("cha"));
+  			c.lineTo(x("str"), y("str"));
+  			c.lineTo(x("con"), y("con"));
+  			c.lineTo(x("dex"), y("dex"));
+  			c.closePath();
+  			c.fill();
+
+  			// Draw a red dot in the center
+  			c = canvas.getContext('2d');
+  			c.fillStyle = '#f00';
+  			c.beginPath();
+  			c.arc(canvas.width / 2, canvas.height / 2, 5, 0, 2 * Math.PI);
+  			c.closePath();
+  			c.fill();
+			};
+		 
+		document.addEventListener("onload", draw());
+        </script>	    
+    </body>
+</html>
+
+
