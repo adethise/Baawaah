@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stats</title>
+
+		<style>
+			input.stat-field { width: 3em; }
+			form { padding: 20px; }
+      #first {
+        width: 200px;
+        float:left;
+      }
+      #second {
+        width: 500px;
+        float:left;
+      }
+
+		</style>
+        <script>
+            var img = new Image();
+            img.src = "elysiumSTAT.png";
+
+            function get_stat_value(name) {
+                return parseInt(document.getElementById(name).value);
+            };
+
+            function x(stat) {
+                center = document.getElementById("canvas").width / 2;
+                mul = {
+                        "dex": 1, "spe": 0.707, "acc": 0, "ini": -0.707,
+                        "int": -1, "cha": -0.707, "str": 0, "con": 0.707
+                };
+                return center + 18 * mul[stat] * get_stat_value(stat);
+            };
+
+            function y(stat) {
+                center = document.getElementById("canvas").height / 2;
+                mul = {
+                        "dex": 0, "spe": 0.707, "acc": 1, "ini": 0.707,
+                        "int": 0, "cha": -0.707, "str": -1, "con": -0.707
+                };
+                return center + 18 * mul[stat] * get_stat_value(stat);
+            };
+
+            function draw() {
+                canvas = document.getElementById('canvas');
+                c = canvas.getContext('2d');
+
+                // Draw a light gray background
+                c.fillStyle = '#DDD';
+                c.fillRect(0, 0, canvas.width, canvas.height);
+
+                var sum = parseInt(document.getElementById("str").value)
+                +  parseInt(document.getElementById("con").value)
+                +  parseInt(document.getElementById("dex").value)
+                +  parseInt(document.getElementById("spe").value)
+                +  parseInt(document.getElementById("acc").value)
+                +  parseInt(document.getElementById("ini").value)
+                +  parseInt(document.getElementById("int").value)
+                +  parseInt(document.getElementById("cha").value);
+                document.getElementById("total").innerHTML = sum;
+
+
+
+                c.drawImage(img, 0, 0,canvas.width,canvas.height);
+
+                // Draw the dark grey figure
+                c.fillStyle = '#555';
+                c.beginPath();
+                c.moveTo(x("dex"), y("dex"));
+                c.lineTo(x("spe"), y("spe"));
+                c.lineTo(x("acc"), y("acc"));
+                c.lineTo(x("ini"), y("ini"));
+                c.lineTo(x("int"), y("int"));
+                c.lineTo(x("cha"), y("cha"));
+                c.lineTo(x("str"), y("str"));
+                c.lineTo(x("con"), y("con"));
+                c.lineTo(x("dex"), y("dex"));
+                c.closePath();
+                c.fill();
+
+                // Draw a red dot in the center
+                c = canvas.getContext('2d');
+                c.fillStyle = '#f00';
+                c.beginPath();
+                c.arc(canvas.width/2, canvas.height/2, 5, 0, 2*Math.PI);
+                c.closePath();
+                c.fill();
+            };
+        </script>
+    </head>
+
+    <body>
+        <div id="first">
+        <form id="stats" action="#">
+            <p><label for="str">Strength</label>
+            <input id="str" class="stat-field" type="number" value="2"></p>
+            <p><label for="con">Constitution</label>
+            <input id="con" class="stat-field" type="number" value="2"></p>
+            <p><label for="dex">Dexterity</label>
+            <input id="dex" class="stat-field" type="number" value="2"></p>
+            <p><label for="spe">Speed</label>
+            <input id="spe" class="stat-field" type="number" value="2"></p>
+            <p><label for="acc">Accuracy</label>
+            <input id="acc" class="stat-field" type="number" value="2"></p>
+            <p><label for="ini">Initiative</label>
+            <input id="ini" class="stat-field" type="number" value="2"></p>
+            <p><label for="int">Intelligence</label>
+            <input id="int" class="stat-field" type="number" value="2"></p>
+            <p><label for="cha">Charisma</label>
+            <input id="cha" class="stat-field" type="number" value="2"></p>
+			      <input type="submit" value="Draw" onclick="draw()">
+            <p>Total point</p> <p id="total"></p>
+        </form>
+      </div>
+      <div id="second">
+        <canvas id="canvas" width="500" height="500">
+      </div>
+    </body>
+</html>
