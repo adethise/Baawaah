@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stats</title>
+	<style>
+		input.stat-field {
+  			width: 3em;
+		}
+
+		td {
+  	         	padding: 3px;
+		}
+
+		#inputs {
+  			width: 200px;
+  			float: left;
+			}
+
+		#output {
+ 			 width: 500px;
+ 			 float: left;
+		}
+	</style>
+    </head>
+
+    <body>
+      <table>
+        <tr>
+          <td>
+              <label for="shottype">Shot Type</label>
+          </td>
+          <td>
+            <select id="shot">
+              <option value="1">Normal Shot</option>
+              <option value="2">Suppression Shot</option>
+              <option value="3">Blind Shot Indirect </option>
+              <option value="4">Blind Shot Unknown </option>
+              <option value="5">Blind Suppression Shot </option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <label for="stancetype">Stance</label>
+          </td>
+          <td>
+            <select id="stance">
+              <option value="1">Neutral</option>
+              <option value="2">Aim</option>
+              <option value="3">Run</option>
+              <option value="4">Combat</option>
+              <option value="5">Protect</option>
+              <option value="6">Discret</option>
+            </select>
+          </td>
+          <td>
+              <input id="stanceVal" class="stat-field" type="number" value="0">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="weapMal">Weapon Malus</label>
+          </td>
+          <td>
+              <input id="weapMal" class="stat-field" type="number" value="0">
+          </td>
+        </tr>
+      </table>
+
+      <button onclick="update()">Calculate</button>
+      <p>Result: <span id="result"></span> point</p>
+
+      <table>
+        <tr>
+          <td><label for="PC_STR">STR</label></td>
+          <td><span id="PC_STR">0</span></td>
+          <td><label for="EN_STR">STR</label></td>
+          <td><span id="EN_STR">0</span></td>
+        </tr>
+        <tr>
+          <td><label for="PC_CON">CON</label></td>
+          <td><span id="PC_CON">0</span></td>
+          <td><label for="EN_CON">CON</label></td>
+          <td><span id="EN_CON">0</span></td>
+        </tr>
+        <tr>
+          <td><label for="PC_DEX">DEX</label></td>
+          <td><span id="PC_DEX">0</span></td>
+          <td><label for="EN_DEX">DEX</label></td>
+          <td><span id="EN_DEX">0</span></td>
+        </tr>
+        <tr>
+          <td><label for="PC_SPE">SPE</label></td>
+          <td><span id="PC_SPE">0</span></td>
+          <td><label for="EN_SPE">SPE</label></td>
+          <td><span id="EN_SPE">0</span></td>
+        </tr>
+        <tr>
+          <td><label for="PC_ACC">ACC</label></td>
+          <td><span id="PC_ACC">0</span></td>
+          <td><label for="EN_ACC">ACC</label></td>
+          <td><span id="EN_ACC">0</span></td>
+        </tr>
+        <tr>
+          <td><label for="PC_INI">INI</label></td>
+          <td><span id="PC_INI">0</span></td>
+          <td><label for="EN_INI">INI</label></td>
+          <td><span id="EN_INI">0</span></td>
+        </tr>
+        <tr>
+          <td><label for="PC_INT">INT</label></td>
+          <td><span id="PC_INT">0</span></td>
+          <td><label for="EN_INT">INT</label></td>
+          <td><span id="EN_INT">0</span></td>
+        </tr>
+        <tr>
+          <td><label for="PC_CHA">CHA</label></td>
+          <td><span id="PC_CHA">0</span></td>
+          <td><label for="EN_CHA">CHA</label></td>
+          <td><span id="EN_CHA">0</span></td>
+        </tr>
+      </table>
+
+	 <script>
+   attribut
+   = {
+      "PC_STR": 0,  "EN_STR": 0,
+      "PC_CON": 0,  "EN_CON": 0,
+      "PC_DEX": 0,  "EN_DEX": 0,
+      "PC_SPE": 0,  "EN_SPE": 0,
+      "PC_ACC": 0,  "EN_ACC": 0,
+      "PC_INI": 0,  "EN_INI": 0,
+      "PC_INT": 0,  "EN_INT": 0,
+      "PC_CHA": 0,  "EN_CHA": 0
+   }
+    function modAt(name,mod){
+        attribut[name] = attribut[name] + mod;
+    }
+    function resetAt(){
+      attribut = {
+         "PC_STR": 0,  "EN_STR": 0,
+         "PC_CON": 0,  "EN_CON": 0,
+         "PC_DEX": 0,  "EN_DEX": 0,
+         "PC_SPE": 0,  "EN_SPE": 0,
+         "PC_ACC": 0,  "EN_ACC": 0,
+         "PC_INI": 0,  "EN_INI": 0,
+         "PC_INT": 0,  "EN_INT": 0,
+         "PC_CHA": 0,  "EN_CHA": 0
+      }
+    }
+
+    function update(){
+        var shotTypeNumber = parseInt(document.getElementById("shot").value);
+        switch(shotTypeNumber){
+          case 1: break;
+          case 2: modAt("PC_ACC",-3); modAt("EN_ACC",-2); break;
+          case 3: modAt("PC_ACC",-5); break;
+          case 4: modAt("PC_ACC",-10); break;
+          case 5: modAt("PC_ACC",-13); modAt("EN_ACC",-2); break;
+        }
+        var stanceNumber = parseInt(document.getElementById("stance").value);
+        var stanceVal    = parseInt(document.getElementById("stanceVal").value);
+        switch(stanceNumber){
+          case 1: break;
+          case 2: modAt("PC_ACC",stanceVal); modAt("PC_SPE",-stanceVal); modAt("PC_INI",1); break;
+          case 3: modAt("PC_SPE",stanceVal); modAt("PC_ACC",-stanceVal); modAt("PC_INI",1); break;
+          case 4: modAt("PC_DEX",1); modAt("PC_STR",1); modAt("PC_INI",1); modAt("PC_ACC",-2); break;
+          case 5: modAt("PC_DEX",2); modAt("PC_CON",2); modAt("PC_SPE",-2); break;
+          case 6: modAt("PC_SPE",-2); break;
+
+        }
+        var weapMal    = parseInt(document.getElementById("weapMal").value);
+        modAt("PC_ACC",weapMal);
+
+
+        document.getElementById("PC_STR").innerHTML = attribut["PC_STR"];
+        document.getElementById("PC_CON").innerHTML = attribut["PC_CON"];
+        document.getElementById("PC_DEX").innerHTML = attribut["PC_DEX"];
+        document.getElementById("PC_SPE").innerHTML = attribut["PC_SPE"];
+        document.getElementById("PC_ACC").innerHTML = attribut["PC_ACC"];
+        document.getElementById("PC_INI").innerHTML = attribut["PC_INI"];
+        document.getElementById("PC_INT").innerHTML = attribut["PC_INT"];
+        document.getElementById("PC_CHA").innerHTML = attribut["PC_CHA"];
+        document.getElementById("EN_STR").innerHTML = attribut["EN_STR"];
+        document.getElementById("EN_CON").innerHTML = attribut["EN_CON"];
+        document.getElementById("EN_DEX").innerHTML = attribut["EN_DEX"];
+        document.getElementById("EN_SPE").innerHTML = attribut["EN_SPE"];
+        document.getElementById("EN_ACC").innerHTML = attribut["EN_ACC"];
+        document.getElementById("EN_INI").innerHTML = attribut["EN_INI"];
+        document.getElementById("EN_INT").innerHTML = attribut["EN_INT"];
+        document.getElementById("EN_CHA").innerHTML = attribut["EN_CHA"];
+        // je me demande si les boucles for existe en javascript.. eh j'hardcode pour le moment
+        resetAt();
+
+    }
+
+        </script>
+    </body>
+</html>
