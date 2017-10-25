@@ -24,8 +24,39 @@ img {
     height: auto;
     width: auto\9; /* ie8 */
 }
+.attrNam{
+  font-weight: bold;
+  margin-bottom:0cm;
+  margin-bottom:.0001pt;
+  text-align: justify;
+  line-height: normal;
+}
 
 
+.attrUp{
+  font-style: italic;
+  margin-bottom:0cm;
+  margin-bottom:.0001pt;
+  text-align: justify;
+  line-height: normal;
+}
+
+.attrDes{
+  font-style: italic;
+  font-size: 75%;
+  margin-bottom:0cm;
+  margin-bottom:.0001pt;
+  text-align: justify;
+  line-height: normal;
+  vertical-align: text-top;
+}
+
+.attrBox{
+  width:259.65pt;
+  padding:0cm 5.4pt 0cm 5.4pt;
+  width: 346;
+  vertical-align: text-top;
+}
 .col1{
    position: relative;
    overflow: hidden;
