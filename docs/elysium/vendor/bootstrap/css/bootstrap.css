@@ -5665,7 +5665,7 @@ button.close {
 }
 
 .bg-primary {
-  background-color: #007bff !important;
+  background-color: #f7f7f7 !important;
 }
 
 a.bg-primary:focus, a.bg-primary:hover {
@@ -5673,7 +5673,7 @@ a.bg-primary:focus, a.bg-primary:hover {
 }
 
 .bg-secondary {
-  background-color: #868e96 !important;
+  background-color: #7E7E7E !important;
 }
 
 a.bg-secondary:focus, a.bg-secondary:hover {

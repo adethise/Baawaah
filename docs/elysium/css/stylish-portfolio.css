@@ -12,9 +12,43 @@ html, body {
 }
 
 body {
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Calibri', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #7e7e7e;
+}
+h1 { font-family: Anurati; src: url('Anurati-Regular.otf'), sans-serif;
+ }
+h2 { font-family: Anurati; src: url('Anurati-Regular.otf'), sans-serif;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
 }
 
+
+.col1{
+   position: relative;
+   overflow: hidden;
+   float: left;
+   width: 32%;
+   right: 5%;
+}
+.col2{
+   position: relative;
+   overflow: hidden;
+   float: left;
+   width: 32%;
+   right: 0%;
+}
+.col3{
+   position: relative;
+   overflow: hidden;
+   float: left;
+   width: 32%;
+   left: 5%;
+}
+
+/**/
 .text-vertical-center {
   display: table-cell;
   text-align: center;
@@ -26,6 +60,7 @@ body {
   font-weight: 700;
   margin: 0;
   padding: 0;
+
 }
 
 
