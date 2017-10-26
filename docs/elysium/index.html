@@ -617,7 +617,7 @@
           <p><h2>SKILL AND TRAIT</h2></p>
           <p>Chaque personnage possède des compétences qui représentent les capacités techniques que le personnage possède.En outre chaque personnage possède aussi des compétences spécialisées ou trait qu’il a acquis via une certaine éducation, entrainement, ou autres évènements dans sa vie. Les compétences et traits sont répartis entre trois grandes familles : combat, physique, et intellectuelle. Chaque compétence a cinq niveaux possibles :</p>
           <p><table>
-              <tr><td><b>0</b></td>     <td><b>UNKNOWN</b></td> 	    <td>Ignorant</td>   <td>– Le personnage ne connais pas la compétence</td>  </tr>
+              <tr><td width=5%><b>0</b></td>     <td width=20%><b>UNKNOWN</b></td> 	    <td width=15%>Ignorant</td>   <td>– Le personnage ne connais pas la compétence</td>  </tr>
               <tr><td><b>1</b></td>     <td><b>BASIC	</b></td>       <td>Basique</td>    <td>– Le personnage est capable de faire des choses rudimentaires</td>  </tr>
               <tr><td><b>2</b></td>     <td><b>NORMAL	</b></td>       <td>Normal</td>     <td>– Le personnage est à un niveau moyen par rapport aux autres</td>  </tr>
               <tr><td><b>3</b></td>     <td><b>ADVANCE</b></td> 	    <td>Avancée</td>    <td>– Le personnage à un niveau avancé</td>  </tr>
@@ -641,8 +641,8 @@
           <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
            style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-alt:
            0cm 5.4pt 0cm 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
-           <tr class="attrBox">
-            <td>
+           <tr class="attrBox" >
+            <td width=25%>
             <b>Pilotage</b>
             <br><i>Phys (DEX)</i></br>
             </td>
@@ -660,7 +660,16 @@
              <p>Bonus ATK + niveau de Kenjutsu</p>
            </td>
           </tr>
-          <tr>
+          <tr class="attrBox">
+           <td>
+           <b>Furtivité</b>
+           <br><i>Phys (DEX)</i>
+           </td>
+           <td class="attrDes">
+             Permet au personnage de pouvoir procéder être discret même en vue de l'adversaire.
+             <br> Bonus Stealth + niveau de Furtivité
+           </td>
+          </tr>
           <tr class="attrBox">
            <td>
            <b>Parkour</b>
@@ -675,7 +684,7 @@
            <td>
            <b>Yamakasi</b>
            <br><i>Phys (SPE)</i>
-           <br><i>requiert Parkour lvl 2</i>
+           <br><i class="attrDes">requiert Parkour lvl 2</i>
            </td>
            <td class="attrDes">
              Permet au personnage de mêler le combat au parkour pour améliorer ses dégâts en utilisant son inertie.
@@ -715,7 +724,7 @@
            <td>
            <b>Hacking</b>
            <br><i>Supp (INT)</i>
-           <br><i>requiert Programmation lvl 3</i>
+           <br><i class="attrDes">requiert Programmation lvl 3</i>
            </td>
            <td class="attrDes">
              Permet au personnage de pouvoir s'introduire dans un système informatisé.
@@ -754,13 +763,14 @@
            <td>
            <b>Manipulation</b>
            <br><i>Supp (CHA)</i>
-           <br><i>requiert Diplomate lvl 2</i>
+           <br><i class="attrDes">requiert Diplomate lvl 2</i>
            </td>
            <td class="attrDes">
              Permet au personnage de convaincre, et manipuler les gens de manière assez profonde.
              <br> Bonus lors des manipulations + niveau de Manipulateur
            </td>
           </tr>
+
           </table>
 
           <p><h3>Trait de Background</h3></p>
@@ -771,9 +781,9 @@
            style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-alt:
            0cm 5.4pt 0cm 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
            <tr class="attrBox">
-            <td><b>Haltérophile</b>
+            <td width=30%><b>Haltérophile</b>
             </td>
-            <td>+2 STR
+            <td width=15%>+2 STR
             </td>
             <td class="attrDes">
               Une journée qui commence avec 1000 pompes, est une bonne journée.
@@ -796,6 +806,15 @@
             <td class="attrDes">
               Il faut une certaine condition physique si on veut rester des heures immobiles sans
               crampes.
+            </td>
+           </tr>
+           <tr class="attrBox">
+            <td><b>A appris l'importance d'esquiver les balles</b>
+            </td>
+            <td>+2 DEX
+            </td>
+            <td class="attrDes">
+              Comme quoi une balle dans l'épaule peut être une bonne lesson.
             </td>
            </tr>
            <tr class="attrBox">
@@ -823,6 +842,15 @@
             </td>
             <td class="attrDes">
               Méfiez-vous des gens qui se lèvent tôt le matin à un dimanche.
+            </td>
+           </tr>
+           <tr class="attrBox">
+            <td><b>I have seen things</b>
+            </td>
+            <td>+2 INT
+            </td>
+            <td class="attrDes">
+              Le personnage a exploré les méandres du deep web.
             </td>
            </tr>
            <tr class="attrBox">
@@ -1068,7 +1096,7 @@
                <tr class="attrBox">
                 <td>
                 <b>Machette</b>
-                <p class="attrDes">Arme de corps à corps souvent utilisé dans en exploration dans les forêts et jungle. Cet arme est assez répandue dans lUnderground pour sa multifonctionnalité. Il est encore normal de couper une noix de coco à coup de machette.
+                <p class="attrDes">Arme de corps à corps souvent utilisé dans en exploration dans les forêts et jungle. Cet arme est assez répandue dans les bas-fonds des quartiers non-résidents pour sa multifonctionnalité. Il est encore normal de couper une noix de coco à coup de machette.
                 <td>1D5
                 </td>
                 <td>Adjacente
