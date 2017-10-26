@@ -75,7 +75,10 @@
           <a class="js-scroll-trigger" href="#arsenal">Arsenal</a>
         </li>
         <li>
-          <a class="js-scroll-trigger" href="#contact" onclick=$( "#menu-close").click();>Contact</a>
+          <a class="js-scroll-trigger" href="elysiummalus.html">Combat Bonus Calculator</a>
+        </li>
+        <li>
+          <a class="js-scroll-trigger" href="elysiumstat.html" onclick=$( "#menu-close").click();>Stat Calculator</a>
         </li>
       </ul>
     </nav>
@@ -86,7 +89,8 @@
         <h1>ELYSIUM</h1>
         <h3>The Science Fiction RPG</h3>
         <br>
-        <a href="#about" class="btn btn-dark btn-lg js-scroll-trigger">Find Out More</a>
+        <a href="elysiumstat.html" class="btn btn-dark btn-lg js-scroll-trigger">Stat Calculator</a>
+        <a href="elysiummalus.html" class="btn btn-dark btn-lg js-scroll-trigger">Bonus Calculator</a>
       </div>
     </header>
 
@@ -283,6 +287,21 @@
             </div>
           </div>
 
+          <div class="col-md-3 col-sm-6">
+            <div class="service-item">
+              <img src="img/S-SNIPER.png">
+              <h4>
+                <strong>CUSTOM</strong>
+              </h4>
+              <div class="text-justify">
+              <p> Biensur, le joueur a le droit de créer son propre profile d'attribut. Pour facilité la répartition des points, un petit calculateur est mis à disposition.
+              </p>
+
+            </div>
+            <a href="elysiumstat.html" class="btn btn-light">Calculator</a>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -327,7 +346,7 @@
 
     <section id="stance" class="services bg-primary">
       <div class="container">
-        <div class="row text-justify">
+        <div class="row">
           <h2>STANCE</h2>
           Chaque joueur peut prendre une posture afin de le favoriser dans une situation. Pour se faire, il doit l’annoncer à chaque début de son tour s’il veut changer de posture, sans quoi il reste sur sa posture précédente.
           <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
@@ -338,9 +357,9 @@
                 <br><i>Neutre</i></br>
             </td>
             <td>
-                <i>None</i>
+
             </td>
-            <td  class="attrBox">
+            <td>
                 Posture par défaut n'apportant pas de bonus.
             </td>
            </tr>
@@ -1072,7 +1091,7 @@
               0cm 5.4pt 0cm 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
               <tr class="attrBox">
                <tr class="attrBox">
-                <td width=50%>
+                <td width=65%>
                 <b>Pistolet PISTOL</b>
                 </td>
                 <td><b>Dégât</b>
@@ -1090,7 +1109,7 @@
                   <br>Le mode semi-automatique permet au joueur de tirer au coup par coup au moyen dune action standard.
                   <br>Le mode rafale permet au joueur de tirer par coups de trois balles au moyen dune action standard faisant plus de dégâts aux dépens de la précision.
                 </td>
-                <td>SEMI <br> 1D4 <br> SEMI <br> 3D4 </td>
+                <td>SEMI <br> 1D4 <br> RAFL <br> 3D4 </td>
                 <td>     <br>-2 ACC<br><br>-4 ACC</td>
                 <td>     <br>-2 ACC<br><br>-6 ACC</td>
                 <td>     <br>-4 ACC<br><br>-8 ACC</td>
@@ -1118,7 +1137,7 @@
                 0cm 5.4pt 0cm 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
                 <tr class="attrBox">
                  <tr class="attrBox">
-                  <td width=50%>
+                  <td width=65%>
                   <b>Sub-Machine Gun SMG</b>
                   </td>
                   <td><b>Dégât</b>
@@ -1159,803 +1178,146 @@
                     </tr>
                 </table>
               <p>
+                <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+                style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-alt:
+                0cm 5.4pt 0cm 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
+                <tr class="attrBox">
+                 <tr class="attrBox">
+                  <td width=65%>
+                  <b>Fusil d'assaut RIFLE</b>
+                  </td>
+                  <td><b>Dégât</b>
+                  </td>
+                  <td><b>Courte</b>
+                  </td>
+                  <td><b>Moyenne</b>
+                  </td>
+                  <td><b>Longue</b>
+                  </td>
+                 </tr>
+                 <tr class="attrBox">
+                  <td><b>G50 Carbine Model S</b>
+                  <p class="attrDes">Inspiré par le HK G36, le G50 Carbine Model S est une carabine ayant un scanner biométrique et deux modes de tir : semi-automatique et automatique.
+                  <br>Le mode semi-automatique permet au joueur de tirer au coup par coup via une action standard.
+                  <br>Le mode automatique permet au joueur de tirer en multishot x3.
+                  </td>
+                  <td>SEMI <br> 1D7   <br> AUTO <br>       </td>
+                  <td>SEMI <br>       <br> AUTO <br> -3 ACC</td>
+                  <td>SEMI <br>       <br> AUTO <br> -3 ACC</td>
+                  <td>SEMI <br>-4 ACC <br> AUTO <br> -7 ACC</td>
+                 </tr>
+                 <tr class="attrBox">
+                  <td><b>AEG-SE</b>
+                  <p class="attrDes">Inspiré par le AEK-971, le AEG-SE est un fusil dassaut et deux modes de tir : semi-automatique et automatique.
+                  <br>Le mode semi-automatique permet au joueur de tirer au coup par coup via une action standard.
+                  <br>Le mode automatique permet au joueur de tirer en multishot x3.
+                  <br>Puisqu'il n'y a pas de scanner biométrique, cette arme est très populaire auprès des mercenaires amateurs.
+                  </td>
+                  <td>SEMI <br> 1D8   <br> AUTO <br>       </td>
+                  <td>SEMI <br>       <br> AUTO <br> -3 ACC</td>
+                  <td>SEMI <br>       <br> AUTO <br> -3 ACC</td>
+                  <td>SEMI <br>-4 ACC <br> AUTO <br> -7 ACC</td>
+                 </tr>
+                 <tr class="attrBox">
+                  <td><b>5M-Black</b>
+                  <p class="attrDes">Inspiré par le M16 et le M4, le 5M-Black est un fusil dassaut ayant un scanner biométrique et deux modes de tir : semi-automatique et automatique.
+                  <br>Le mode semi-automatique permet au joueur de tirer au coup par coup via une action standard.
+                  <br>Le mode automatique permet au joueur de tirer en multishot x3.
+                  </td>
+                  <td>SEMI <br> 1D8   <br> AUTO <br>       </td>
+                  <td>SEMI <br>       <br> AUTO <br> -2 ACC</td>
+                  <td>SEMI <br>       <br> AUTO <br> -2 ACC</td>
+                  <td>SEMI <br>-3 ACC <br> AUTO <br> -6 ACC</td>
+                 </tr>
+
+                </table>
+                <p>
+                  <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+                  style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-alt:
+                  0cm 5.4pt 0cm 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
+                  <tr class="attrBox">
+                   <tr class="attrBox">
+                    <td width=65%>
+                    <b>Fusil d'assaut RIFLE</b>
+                    </td>
+                    <td><b>Dégât</b>
+                    </td>
+                    <td><b>Courte</b>
+                    </td>
+                    <td><b>Moyenne</b>
+                    </td>
+                    <td><b>Longue</b>
+                    </td>
+                   </tr>
+                   <tr class="attrBox">
+                    <td><b>AWC-E</b>
+                    <p class="attrDes">Inspiré par la série d'arme AW, le AWC-E est un fusil à lunette ayant un scanner biométrique capable de tirer en semi-automatique grâce à son chargeur. Toutefois, l'utilisateur n'est capable de tirer qu'une fois par tour.
+                    </td>
+                    <td>1D12   </td>
+                    <td>-4 ACC </td>
+                    <td>       </td>
+                    <td>       </td>
+                   </tr>
+                   <tr class="attrBox">
+                    <td><b>SF-4A</b>
+                    <p class="attrDes">Inspiré par le SV-98, le SF-4A est un fusil à lunette à levier qui tir un coup à la fois. Un tir prend une action standard, et lenclenchement du levier coûte une action de mouvement. Puisquil ny a pas de scanner biométrique, cette arme est très populaire auprès des mercenaires amateurs.
+                    </td>
+                    <td>1D13   </td>
+                    <td>-4 ACC </td>
+                    <td>       </td>
+                    <td>       </td>
+                   </tr>
+                   <tr class="attrBox">
+                    <td><b>G4SG-E</b>
+                    <p class="attrDes">Inspiré par le G3SG1, le G5SG-E est un fusil à lunette semi-automatique ayant deux modes de tirs : coup par coup et semi-automatique.
+                    <br>Le mode coup par coup permet au joueur de tirer au coup par coup via une action standard.
+                    <br>Le mode semi-automatique permet au joueur de tirer en multishot x2.
+                    </td>
+                    <td>SEMI <br> 1D8   <br> AUTO <br>       </td>
+                    <td>SEMI <br>-4 ACC <br> AUTO <br> -5 ACC</td>
+                    <td>SEMI <br>       <br> AUTO <br> -3 ACC</td>
+                    <td>SEMI <br>       <br> AUTO <br> -4 ACC</td>
+                   </tr>
+                 </table>
+                 <p>
+                 <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+                 style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-alt:
+                 0cm 5.4pt 0cm 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
+                 <tr class="attrBox">
+                  <tr class="attrBox">
+                   <td width=70%><b>Arme non létaux</b></td>
+                   <td><b>Dégât</b></td>
+                   <td><b>Portée/Malus</b> </td>
+                  </tr>
+                  <tr class="attrBox">
+                   <td width=70%><b>M50-Taser Pistolet Taser</b>
+                   <p class="attrDes">Inspiré par la M-26 Taser, le M50-Taser est un pistolet taser capable denvoyer une charge électrique puissante provoquant des dégâts non létaux. L'arme envoie deux électrodes qui s'agrippe sur l'adversaire ce qui oblige l'utilisateur à récupérer les électrodes avant de pouvoir tirer.
+                   </td>
+                   <td>1D8 <span class="attrDes">non léthal</span></td>
+                   <td>2 cases</td>
+                  </tr>
+                  <tr class="attrBox">
+                   <td width=70%><b>EPP150 Pulse Pistol</b>
+                   <p class="attrDes">Le EPP150 Pulse Pistol est un pistolet à impulsion de plasma ayant un scanner biométrique. Le pistolet utilise le principe de "Low Temperature Plasma" qui crée un plasma assez froid pour ne pas brûler l'adversaire, tout en ayant une charge électrique assez intense pour affliger des dégâts non létaux. Par frottement de l'air, le plasma se désagrège si bien que l'arme ne peut que tirer en portée moyenne maximum.
+                   </td>
+                   <td><b>Courte</b><br> 1D7 <span class="attrDes">non léthal </span><br><b>Moyenne</b><br> 1D5 <span class="attrDes">non léthal </span></td>
+                   <td><b>Courte</b><br><br><b>Moyenne</b><br>-1 ACC</td>
+                  </tr>
+                  <tr class="attrBox">
+                   <td width=70%><b>EPP200 Pulse Rifle</b>
+                   <p class="attrDes">Inspiré par le EPP150, le EPP200 est un fusil mitrailleur à impulsion de plasma ayant un scanner biométrique. Le fusil utilise le principe de "Low Temperature Plasma" qui crée un plasma assez froid pour ne pas brûler l'adversaire, tout en ayant une charge électrique assez intense pour affliger des dégâts non létaux. Par frottement de l'air, le plasma se désagrège si bien que l'arme ne peut que tirer en portée moyenne maximum. En outre, l'arme possède deux modes de tir : semi-automatique et automatique.
+                   <br>Le mode semi-automatique permet au joueur de tirer au coup par coup via une action standard.
+                   <br>Le mode automatique permet au joueur de tirer en multishot x3.
+                   </td>
+                   <td><b>Courte</b><br> 1D8 <span class="attrDes">non léthal </span><br><br><br><br><b>Moyenne</b><br> 1D6 <span class="attrDes">non léthal </span></td>
+                   <td><b>Courte</b><br>SEMI<br><br>AUTO<br>-3 ACC<br><b>Moyenne</b><br>SEMI<br><br>AUTO<br>-3 ACC</td>
+                  </tr>
+                 </table>
 
 
-            <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 width=603
-             style='width:452.15pt;border-collapse:collapse;border:none;mso-yfti-tbllook:
-             1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:none;mso-border-insidev:
-             none'>
-             <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
-              <td width=340 valign=top style='width:254.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><span class=SpellE><b><span style='color:#595959;
-              mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>Sub</span></b></span><b><span
-              style='color:#595959;mso-themecolor:text1;mso-themetint:166;mso-ansi-language:
-              FR-BE'>-Machine Gun <i>SMG</i><o:p></o:p></span></b></p>
-              </td>
-              <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>Dégât<o:p></o:p></span></b></p>
-              </td>
-              <td width=66 valign=top style='width:49.6pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>Courte<o:p></o:p></span></b></p>
-              </td>
-              <td width=76 valign=top style='width:2.0cm;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>Moyenne<o:p></o:p></span></b></p>
-              </td>
-              <td width=65 valign=top style='width:48.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>Longue<o:p></o:p></span></b></p>
-              </td>
-             </tr>
-             <tr style='mso-yfti-irow:1'>
-              <td width=340 valign=top style='width:254.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>MP-10E<o:p></o:p></span></b></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><i><span style='font-size:9.0pt;color:#595959;
-              mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>Inspiré par
-              le HK MP7, le MP-10E est un pistolet-mitrailleur ayant un scanner biométrique
-              pouvant tirer en mode automatique qui permet à lutilisateur de pouvoir tirer
-              en <span class=SpellE>multishot</span> x5.<o:p></o:p></span></i></p>
-              </td>
-              <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><span style='color:#595959;mso-themecolor:text1;
-              mso-themetint:166;mso-ansi-language:FR-BE'>1D5<o:p></o:p></span></p>
-              </td>
-              <td width=66 valign=top style='width:49.6pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-2 ACC<o:p></o:p></span></p>
-              </td>
-              <td width=76 valign=top style='width:2.0cm;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-5 ACC<o:p></o:p></span></p>
-              </td>
-              <td width=65 valign=top style='width:48.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><span style='color:#595959;mso-themecolor:text1;
-              mso-themetint:166;mso-ansi-language:FR-BE'>-10 ACC<o:p></o:p></span></p>
-              </td>
-             </tr>
-             <tr style='mso-yfti-irow:2'>
-              <td width=340 valign=top style='width:254.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>UZI-200<o:p></o:p></span></b></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><i><span style='font-size:9.0pt;color:#595959;
-              mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>Inspiré par
-              le <span class=SpellE>Uzi</span>, le UZI-200 est un pistolet-mitrailleur pouvant
-              tirer en mode automatique qui permet à lutilisateur de pouvoir tirer en <span
-              class=SpellE>multishot</span> x5. Par le fait quil ne possède pas de scanner
-              biométrique, il est fort apprécié par les petits gangs.<o:p></o:p></span></i></p>
-              </td>
-              <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><span style='color:#595959;mso-themecolor:text1;
-              mso-themetint:166;mso-ansi-language:FR-BE'>1D4<o:p></o:p></span></p>
-              </td>
-              <td width=66 valign=top style='width:49.6pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-2 ACC<o:p></o:p></span></p>
-              </td>
-              <td width=76 valign=top style='width:2.0cm;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-6 ACC<o:p></o:p></span></p>
-              </td>
-              <td width=65 valign=top style='width:48.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><span style='color:#595959;mso-themecolor:text1;
-              mso-themetint:166;mso-ansi-language:FR-BE'>-10 ACC<o:p></o:p></span></p>
-              </td>
-             </tr>
-             <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
-              <td width=340 valign=top style='width:254.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><span class=SpellE><b><span style='color:#595959;
-              mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>PNinety</span></b></span><b><span
-              style='color:#595959;mso-themecolor:text1;mso-themetint:166;mso-ansi-language:
-              FR-BE'>-S<o:p></o:p></span></b></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><i><span style='font-size:9.0pt;color:#595959;
-              mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>Inspiré par
-              le FN P-90, le <span class=SpellE>PNinety</span>-S est un <span class=SpellE>pistolet-mitraileur</span>
-              ayant un scanner biométrique pouvant tirer en mode automatique qui permet à
-              lutilisateur de pouvoir tirer en <span class=SpellE>multishot</span> x4. On
-              dit que larme a été créé à partir des meilleurs <span class=SpellE>gauffres</span>
-              du pays et capable de tirer 900 frites par minute.<o:p></o:p></span></i></p>
-              </td>
-              <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><span style='color:#595959;mso-themecolor:text1;
-              mso-themetint:166;mso-ansi-language:FR-BE'>1D6<o:p></o:p></span></p>
-              </td>
-              <td width=66 valign=top style='width:49.6pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoListParagraph align=center style='margin-bottom:0cm;margin-bottom:
-              .0001pt;mso-add-space:auto;text-align:center;text-indent:-18.0pt;line-height:
-              normal;mso-list:l0 level1 lfo1'><![if !supportLists]><span style='mso-ascii-font-family:
-              Calibri;mso-fareast-font-family:Calibri;mso-hansi-font-family:Calibri;
-              mso-bidi-font-family:Calibri;color:#595959;mso-themecolor:text1;mso-themetint:
-              166;mso-ansi-language:FR-BE'><span style='mso-list:Ignore'>-<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              </span></span></span><![endif]><span style='mso-bidi-font-family:Calibri;
-              mso-bidi-theme-font:minor-latin;color:#595959;mso-themecolor:text1;
-              mso-themetint:166;mso-ansi-language:FR-BE'><o:p>&nbsp;</o:p></span></p>
-              </td>
-              <td width=76 valign=top style='width:2.0cm;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-<o:p></o:p></span></p>
-              </td>
-              <td width=65 valign=top style='width:48.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><span style='color:#595959;mso-themecolor:text1;
-              mso-themetint:166;mso-ansi-language:FR-BE'>-5 ACC<o:p></o:p></span></p>
-              </td>
-             </tr>
-            </table>
 
-            <p class=MsoNormal><span lang=FR><o:p>&nbsp;</o:p></span></p>
 
-            <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
-             style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-alt:
-             0cm 5.4pt 0cm 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
-             <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
-              <td width=340 valign=top style='width:254.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>Fusil dassaut <i>RIFLE</i><o:p></o:p></span></b></p>
-              </td>
-              <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>Dégât<o:p></o:p></span></b></p>
-              </td>
-              <td width=66 valign=top style='width:49.6pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>Courte<o:p></o:p></span></b></p>
-              </td>
-              <td width=76 valign=top style='width:2.0cm;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>Moyenne<o:p></o:p></span></b></p>
-              </td>
-              <td width=63 valign=top style='width:47.05pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>Longue<o:p></o:p></span></b></p>
-              </td>
-             </tr>
-             <tr style='mso-yfti-irow:1'>
-              <td width=340 valign=top style='width:254.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>G50 <span class=SpellE>Carbine</span>
-              Model S<o:p></o:p></span></b></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><i><span style='font-size:9.0pt;color:#595959;
-              mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>Inspiré par
-              le HK G36, le G50 <span class=SpellE>Carbine</span> Model S est une carabine
-              ayant un scanner biométrique et deux modes de tir&nbsp;: semi-automatique et
-              automatique.<o:p></o:p></span></i></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><i><span style='font-size:9.0pt;color:#595959;
-              mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>Le mode
-              semi-automatique permet au joueur de tirer au coup par coup via une action
-              standard. <o:p></o:p></span></i></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><i><span style='font-size:9.0pt;color:#595959;
-              mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>Le mode
-              automatique permet au joueur de tirer en <span class=SpellE>multishot</span>
-              x3.<o:p></o:p></span></i></p>
-              </td>
-              <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><span style='color:#595959;mso-themecolor:text1;
-              mso-themetint:166;mso-ansi-language:FR-BE'>1D7<o:p></o:p></span></p>
-              </td>
-              <td width=66 valign=top style='width:49.6pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>SEMI<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>AUTO<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-3 ACC<o:p></o:p></span></p>
-              </td>
-              <td width=76 valign=top style='width:2.0cm;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>SEMI<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>AUTO<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-3 ACC<o:p></o:p></span></p>
-              </td>
-              <td width=63 valign=top style='width:47.05pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>SEMI<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-4 ACC<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>AUTO<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-7 ACC<o:p></o:p></span></p>
-              </td>
-             </tr>
-             <tr style='mso-yfti-irow:2'>
-              <td width=340 valign=top style='width:254.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>AEG-SE<o:p></o:p></span></b></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><i><span style='font-size:9.0pt;color:#595959;
-              mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>Inspiré par
-              le AEK-971, le AEG-SE est un fusil dassaut et deux modes de tir&nbsp;:
-              semi-automatique et automatique.<o:p></o:p></span></i></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><i><span style='font-size:9.0pt;color:#595959;
-              mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>Le mode
-              semi-automatique permet au joueur de tirer au coup par coup via une action
-              standard. <o:p></o:p></span></i></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><i><span style='font-size:9.0pt;color:#595959;
-              mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>Le mode
-              automatique permet au joueur de tirer en <span class=SpellE>multishot</span>
-              x3.<o:p></o:p></span></i></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><i><span style='font-size:9.0pt;color:#595959;
-              mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>Puisquil ny
-              a pas de scanner biométrique, cette arme est très populaire auprès des
-              mercenaires amateurs.</span></i><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'><o:p></o:p></span></p>
-              </td>
-              <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-              normal'><span style='color:#595959;mso-themecolor:text1;mso-themetint:166;
-              mso-ansi-language:FR-BE'>1D8<o:p></o:p></span></p>
-              </td>
-              <td width=66 valign=top style='width:49.6pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>SEMI<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>AUTO<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-3 ACC<o:p></o:p></span></p>
-              </td>
-              <td width=76 valign=top style='width:2.0cm;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>SEMI<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>AUTO<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-3 ACC<o:p></o:p></span></p>
-              </td>
-              <td width=63 valign=top style='width:47.05pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>SEMI<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-4 ACC<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>AUTO<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-7 ACC<o:p></o:p></span></p>
-              </td>
-             </tr>
-             <tr style='mso-yfti-irow:3'>
-              <td width=340 valign=top style='width:254.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>5M-Black<o:p></o:p></span></b></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><i><span style='font-size:9.0pt;color:#595959;
-              mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>Inspiré par
-              le M16 et le M4, le 5M-Black est un fusil dassaut ayant un scanner biométrique
-              et deux modes de tir&nbsp;: semi-automatique et automatique.<o:p></o:p></span></i></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><i><span style='font-size:9.0pt;color:#595959;
-              mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>Le mode
-              semi-automatique permet au joueur de tirer au coup par coup via une action
-              standard. <o:p></o:p></span></i></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><i><span style='font-size:9.0pt;color:#595959;
-              mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>Le mode
-              automatique permet au joueur de tirer en <span class=SpellE>multishot</span>
-              x3.</span></i><span style='color:#595959;mso-themecolor:text1;mso-themetint:
-              166;mso-ansi-language:FR-BE'> <o:p></o:p></span></p>
-              </td>
-              <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><span style='color:#595959;mso-themecolor:text1;
-              mso-themetint:166;mso-ansi-language:FR-BE'>1D7<o:p></o:p></span></p>
-              </td>
-              <td width=66 valign=top style='width:49.6pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>SEMI<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>AUTO<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-2 ACC<o:p></o:p></span></p>
-              </td>
-              <td width=76 valign=top style='width:2.0cm;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>SEMI<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>AUTO<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-2 ACC<o:p></o:p></span></p>
-              </td>
-              <td width=63 valign=top style='width:47.05pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>SEMI<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-3 ACC<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>AUTO<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-6 ACC<o:p></o:p></span></p>
-              </td>
-             </tr>
-             <tr style='mso-yfti-irow:4;mso-yfti-lastrow:yes'>
-              <td width=340 valign=top style='width:254.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
-              style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;
-              color:#595959;mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'><o:p>&nbsp;</o:p></span></b></p>
-              </td>
-              <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
-              style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;
-              color:#595959;mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'><o:p>&nbsp;</o:p></span></b></p>
-              </td>
-              <td width=66 valign=top style='width:49.6pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
-              style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;
-              color:#595959;mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'><o:p>&nbsp;</o:p></span></b></p>
-              </td>
-              <td width=76 valign=top style='width:2.0cm;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
-              style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;
-              color:#595959;mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'><o:p>&nbsp;</o:p></span></b></p>
-              </td>
-              <td width=63 valign=top style='width:47.05pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b style='mso-bidi-font-weight:normal'><span
-              style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;
-              color:#595959;mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'><o:p>&nbsp;</o:p></span></b></p>
-              </td>
-             </tr>
-            </table>
 
-            <p class=MsoNormal><span lang=FR><o:p>&nbsp;</o:p></span></p>
-
-            <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
-             style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-alt:
-             0cm 5.4pt 0cm 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
-             <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
-              <td width=340 valign=top style='width:254.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>Fusil de précision <i
-              style='mso-bidi-font-style:normal'>SNIPER</i><o:p></o:p></span></b></p>
-              </td>
-              <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>Dégât<o:p></o:p></span></b></p>
-              </td>
-              <td width=66 valign=top style='width:49.6pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>Courte<o:p></o:p></span></b></p>
-              </td>
-              <td width=76 valign=top style='width:2.0cm;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>Moyenne<o:p></o:p></span></b></p>
-              </td>
-              <td width=63 valign=top style='width:47.05pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>Longue<o:p></o:p></span></b></p>
-              </td>
-             </tr>
-             <tr style='mso-yfti-irow:1'>
-              <td width=340 valign=top style='width:254.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>AWC-E<o:p></o:p></span></b></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><i><span style='font-size:9.0pt;color:#595959;
-              mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>Inspiré par
-              la série darme AW, le AWC-E est un fusil à lunette ayant un scanner
-              biométrique capable de tirer en semi-automatique grâce à son chargeur.
-              Toutefois, lutilisateur nest capable de tirer quune fois par tour.<o:p></o:p></span></i></p>
-              </td>
-              <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><span style='color:#595959;mso-themecolor:text1;
-              mso-themetint:166;mso-ansi-language:FR-BE'>1D12<o:p></o:p></span></p>
-              </td>
-              <td width=66 valign=top style='width:49.6pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-4 ACC<o:p></o:p></span></p>
-              </td>
-              <td width=76 valign=top style='width:2.0cm;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-<o:p></o:p></span></p>
-              </td>
-              <td width=63 valign=top style='width:47.05pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-<o:p></o:p></span></p>
-              </td>
-             </tr>
-             <tr style='mso-yfti-irow:2'>
-              <td width=340 valign=top style='width:254.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>SF-4A<o:p></o:p></span></b></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><i><span style='font-size:9.0pt;color:#595959;
-              mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>Inspiré par
-              le SV-98, le SF-4A est un fusil à lunette à levier qui tir un coup à la fois.
-              Un tir prend une action standard, et lenclenchement du levier coûte une
-              action de mouvement. Puisquil ny a pas de scanner biométrique, cette arme
-              est très populaire auprès des mercenaires amateurs.<o:p></o:p></span></i></p>
-              </td>
-              <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><span style='color:#595959;mso-themecolor:text1;
-              mso-themetint:166;mso-ansi-language:FR-BE'>1D13<o:p></o:p></span></p>
-              </td>
-              <td width=66 valign=top style='width:49.6pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-4 ACC<o:p></o:p></span></p>
-              </td>
-              <td width=76 valign=top style='width:2.0cm;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-<o:p></o:p></span></p>
-              </td>
-              <td width=63 valign=top style='width:47.05pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-<o:p></o:p></span></p>
-              </td>
-             </tr>
-             <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
-              <td width=340 valign=top style='width:254.9pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>G5SG-E<o:p></o:p></span></b></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><i><span style='font-size:9.0pt;color:#595959;
-              mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>Inspiré par
-              le G3SG1, le G5SG-E est un fusil à lunette semi-automatique ayant deux modes
-              de tirs&nbsp;: coup par coup et semi-automatique.<o:p></o:p></span></i></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><i><span style='font-size:9.0pt;color:#595959;
-              mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>Le mode coup
-              par coup permet au joueur de tirer au coup par coup via une action standard. <o:p></o:p></span></i></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><i><span style='font-size:9.0pt;color:#595959;
-              mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>Le mode
-              semi-automatique permet au joueur de tirer en <span class=SpellE>multishot</span>
-              x2.<o:p></o:p></span></i></p>
-              </td>
-              <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><span style='color:#595959;mso-themecolor:text1;
-              mso-themetint:166;mso-ansi-language:FR-BE'>1D9<o:p></o:p></span></p>
-              </td>
-              <td width=66 valign=top style='width:49.6pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-              normal'><span class=SpellE><span style='color:#595959;mso-themecolor:text1;
-              mso-themetint:166;mso-ansi-language:FR-BE'>CpC</span></span><span
-              style='color:#595959;mso-themecolor:text1;mso-themetint:166;mso-ansi-language:
-              FR-BE'><o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-4 ACC<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>SEMI<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-5 ACC<o:p></o:p></span></p>
-              </td>
-              <td width=76 valign=top style='width:2.0cm;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span class=SpellE><span
-              style='color:#595959;mso-themecolor:text1;mso-themetint:166;mso-ansi-language:
-              FR-BE'>CpC</span></span><span style='color:#595959;mso-themecolor:text1;
-              mso-themetint:166;mso-ansi-language:FR-BE'><o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>SEMI<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-3 ACC<o:p></o:p></span></p>
-              </td>
-              <td width=63 valign=top style='width:47.05pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span class=SpellE><span
-              style='color:#595959;mso-themecolor:text1;mso-themetint:166;mso-ansi-language:
-              FR-BE'>CpC</span></span><span style='color:#595959;mso-themecolor:text1;
-              mso-themetint:166;mso-ansi-language:FR-BE'><o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>SEMI<o:p></o:p></span></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-4 ACC<o:p></o:p></span></p>
-              </td>
-             </tr>
-            </table>
-
-            <p class=MsoNormal><span lang=FR><o:p>&nbsp;</o:p></span></p>
-
-            <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
-             style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-alt:
-             0cm 5.4pt 0cm 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
-             <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
-              <td width=397 valign=top style='width:297.45pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>Arme non létaux<o:p></o:p></span></b></p>
-              </td>
-              <td width=94 valign=top style='width:70.85pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>Dégât<o:p></o:p></span></b></p>
-              </td>
-              <td width=110 valign=top style='width:82.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>Portée<o:p></o:p></span></b></p>
-              </td>
-             </tr>
-             <tr style='mso-yfti-irow:1'>
-              <td width=397 valign=top style='width:297.45pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>M50-Taser Pistolet <span
-              class=SpellE>Taser</span><o:p></o:p></span></b></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><i><span style='font-size:9.0pt;color:#595959;
-              mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>Inspiré par
-              la M-26 <span class=SpellE>Taser</span>, le M50-Taser est un pistolet <span
-              class=SpellE>taser</span> capable denvoyer une charge électrique puissante
-              provoquant des dégâts non létaux. Larme envoie deux électrodes qui sagrippe
-              sur ladversaire ce qui oblige lutilisateur à récupérer les électrodes avant
-              de pouvoir tirer.</span></i><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'><o:p></o:p></span></b></p>
-              </td>
-              <td width=94 valign=top style='width:70.85pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-              normal'><span style='color:#595959;mso-themecolor:text1;mso-themetint:166;
-              mso-ansi-language:FR-BE'>1D8 </span><i><span style='font-size:9.0pt;
-              color:#595959;mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>non
-              léthal</span></i><b><span style='color:#595959;mso-themecolor:text1;
-              mso-themetint:166;mso-ansi-language:FR-BE'><o:p></o:p></span></b></p>
-              </td>
-              <td width=110 valign=top style='width:82.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><span style='color:#595959;mso-themecolor:text1;
-              mso-themetint:166;mso-ansi-language:FR-BE'>2 cases<b><o:p></o:p></b></span></p>
-              </td>
-             </tr>
-             <tr style='mso-yfti-irow:2'>
-              <td width=397 valign=top style='width:297.45pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>EPP150 Pulse <span
-              class=SpellE>Pistol</span><o:p></o:p></span></b></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><i><span style='font-size:9.0pt;color:#595959;
-              mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>Le EPP150
-              Pulse <span class=SpellE>Pistol</span> est un pistolet à impulsion de plasma
-              ayant un scanner biométrique. Le pistolet utilise le principe de Ğ&nbsp;Low <span
-              class=SpellE>Temperature</span> Plasma&nbsp;ğ qui crée un plasma assez froid
-              pour ne pas brûler ladversaire, tout en ayant une charge électrique assez
-              intense pour affliger des dégâts non létaux. Par frottement de lair, le
-              plasma se désagrège si bien que larme ne peut que tirer en portée moyenne
-              maximum.<o:p></o:p></span></i></p>
-              </td>
-              <td width=94 valign=top style='width:70.85pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-              normal'><b><span style='color:#595959;mso-themecolor:text1;mso-themetint:
-              166;mso-ansi-language:FR-BE'>Courte<o:p></o:p></span></b></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-              normal'><span style='color:#595959;mso-themecolor:text1;mso-themetint:166;
-              mso-ansi-language:FR-BE'>1D7 </span><i><span style='font-size:9.0pt;
-              color:#595959;mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>non
-              léthal</span></i><span style='color:#595959;mso-themecolor:text1;mso-themetint:
-              166;mso-ansi-language:FR-BE'><o:p></o:p></span></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-              normal'><b><span style='color:#595959;mso-themecolor:text1;mso-themetint:
-              166;mso-ansi-language:FR-BE'>Moyenne<o:p></o:p></span></b></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-              normal'><span style='color:#595959;mso-themecolor:text1;mso-themetint:166;
-              mso-ansi-language:FR-BE'>1D5 </span><i><span style='font-size:9.0pt;
-              color:#595959;mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>non
-              léthal</span></i><span style='color:#595959;mso-themecolor:text1;mso-themetint:
-              166;mso-ansi-language:FR-BE'><o:p></o:p></span></p>
-              </td>
-              <td width=110 valign=top style='width:82.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>Courte<o:p></o:p></span></b></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-<o:p></o:p></span></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>Moyenne<o:p></o:p></span></b></p>
-              <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-              text-align:center;line-height:normal'><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>-1 ACC<o:p></o:p></span></p>
-              </td>
-             </tr>
-             <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
-              <td width=397 valign=top style='width:297.45pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>EPP200 Pulse Rifle<o:p></o:p></span></b></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><i><span style='font-size:9.0pt;color:#595959;
-              mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>Inspiré par
-              le EPP150, le EPP200 est un fusil mitrailleur à impulsion de plasma ayant un
-              scanner biométrique. Le fusil</span></i><b><span style='color:#595959;
-              mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'> </span></b><i><span
-              style='font-size:9.0pt;color:#595959;mso-themecolor:text1;mso-themetint:166;
-              mso-ansi-language:FR-BE'>utilise le principe de Ğ&nbsp;Low <span
-              class=SpellE>Temperature</span> Plasma&nbsp;ğ qui crée un plasma assez froid
-              pour ne pas brûler ladversaire, tout en ayant une charge électrique assez
-              intense pour affliger des dégâts non létaux. Par frottement de lair, le
-              plasma se désagrège si bien que larme ne peut que tirer en portée moyenne
-              maximum. En outre, larme possède deux modes de tir&nbsp;: semi-automatique
-              et automatique.<o:p></o:p></span></i></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><i><span style='font-size:9.0pt;color:#595959;
-              mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>Le mode
-              semi-automatique permet au joueur de tirer au coup par coup via une action
-              standard. <o:p></o:p></span></i></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><i><span style='font-size:9.0pt;color:#595959;
-              mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>Le mode
-              automatique permet au joueur de tirer en <span class=SpellE>multishot</span>
-              x3.</span></i><b><span style='color:#595959;mso-themecolor:text1;mso-themetint:
-              166;mso-ansi-language:FR-BE'><o:p></o:p></span></b></p>
-              </td>
-              <td width=94 valign=top style='width:70.85pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-              normal'><b><span style='color:#595959;mso-themecolor:text1;mso-themetint:
-              166;mso-ansi-language:FR-BE'>Courte<o:p></o:p></span></b></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-              normal'><span style='color:#595959;mso-themecolor:text1;mso-themetint:166;
-              mso-ansi-language:FR-BE'>1D8 </span><i><span style='font-size:9.0pt;
-              color:#595959;mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>non
-              léthal<o:p></o:p></span></i></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-              normal'><b style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-family:
-              Calibri;mso-bidi-theme-font:minor-latin;color:#595959;mso-themecolor:text1;
-              mso-themetint:166;mso-ansi-language:FR-BE'><o:p>&nbsp;</o:p></span></b></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-              normal'><b style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-family:
-              Calibri;mso-bidi-theme-font:minor-latin;color:#595959;mso-themecolor:text1;
-              mso-themetint:166;mso-ansi-language:FR-BE'><o:p>&nbsp;</o:p></span></b></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-              normal'><b><span style='color:#595959;mso-themecolor:text1;mso-themetint:
-              166;mso-ansi-language:FR-BE'>Moyenne<o:p></o:p></span></b></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-              normal'><span style='color:#595959;mso-themecolor:text1;mso-themetint:166;
-              mso-ansi-language:FR-BE'>1D6 </span><i><span style='font-size:9.0pt;
-              color:#595959;mso-themecolor:text1;mso-themetint:166;mso-ansi-language:FR-BE'>non
-              léthal</span></i><span style='color:#595959;mso-themecolor:text1;mso-themetint:
-              166;mso-ansi-language:FR-BE'><o:p></o:p></span></p>
-              </td>
-              <td width=110 valign=top style='width:82.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>Courte <o:p></o:p></span></b></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-              normal'><span style='color:#595959;mso-themecolor:text1;mso-themetint:166;
-              mso-ansi-language:FR-BE'>SEMI<span style='mso-spacerun:yes'>          
-              </span>-<o:p></o:p></span></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-              normal'><span style='color:#595959;mso-themecolor:text1;mso-themetint:166;
-              mso-ansi-language:FR-BE'>AUTO<span style='mso-spacerun:yes'>    </span>-3 ACC<o:p></o:p></span></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><span style='mso-bidi-font-family:Calibri;
-              mso-bidi-theme-font:minor-latin;color:#595959;mso-themecolor:text1;
-              mso-themetint:166;mso-ansi-language:FR-BE'><o:p>&nbsp;</o:p></span></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><b><span style='color:#595959;mso-themecolor:
-              text1;mso-themetint:166;mso-ansi-language:FR-BE'>Moyenne <o:p></o:p></span></b></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><span style='color:#595959;mso-themecolor:text1;
-              mso-themetint:166;mso-ansi-language:FR-BE'>SEMI<span
-              style='mso-spacerun:yes'>           </span>-<o:p></o:p></span></p>
-              <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-              justify;line-height:normal'><span style='color:#595959;mso-themecolor:text1;
-              mso-themetint:166;mso-ansi-language:FR-BE'>AUTO<span
-              style='mso-spacerun:yes'>    </span>-3 ACC<o:p></o:p></span></p>
-              </td>
-             </tr>
-            </table>
 
         </div>
       </div>
