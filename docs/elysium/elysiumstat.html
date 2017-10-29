@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Stats</title>
-	<style>
-  input.stat-field {
-    width: 3em;
-  }
+        <title>Elysium - Stats Builder</title>
+        <style>
+              input.stat-field {
+                width: 3em;
+              }
 
-  td {
-    padding: 3px;
-  }
+              td {
+                padding: 3px;
+              }
 
-  #inputs {
-    width: 200px;
-    float: left;
-  }
+              #inputs {
+                width: 200px;
+                float: left;
+              }
 
-  #output {
-    width: 500px;
-    float: left;
-  }
+              #output {
+                width: 500px;
+                float: left;
+              }
 
-	</style>
+        </style>
     </head>
 
     <body>
@@ -102,85 +102,84 @@
 
 
 	 <script>
-   var background = new Image();
-background.onload = draw;
-background.src = "http://image.ibb.co/fB2sRR/elysium_STAT.png";
+		var background = new Image();
+		background.onload = draw;
+		background.src = "http://image.ibb.co/fB2sRR/elysium_STAT.png";
 
-function get(name) {
- return parseInt(document.getElementById(name).value);
-};
+		function get(name) {
+		  return parseInt(document.getElementById(name).value);
+		};
 
-function x(stat) {
- center = document.getElementById("canvas").width / 2;
- mul = {
-   "dex": 1,
-   "spe": 0.707,
-   "acc": 0,
-   "ini": -0.707,
-   "int": -1,
-   "cha": -0.707,
-   "str": 0,
-   "con": 0.707
- };
- return center + 18 * mul[stat] * get(stat);
-};
+		function x(stat) {
+		  center = document.getElementById("canvas").width / 2;
+		  mul = {
+			"dex": 1,
+			"spe": 0.707,
+			"acc": 0,
+			"ini": -0.707,
+			"int": -1,
+			"cha": -0.707,
+			"str": 0,
+			"con": 0.707
+		  };
+		  return center + 18 * mul[stat] * get(stat);
+		};
 
-function y(stat) {
- center = document.getElementById("canvas").height / 2;
- mul = {
-   "dex": 0,
-   "spe": 0.707,
-   "acc": 1,
-   "ini": 0.707,
-   "int": 0,
-   "cha": -0.707,
-   "str": -1,
-   "con": -0.707
- };
- return center + 18 * mul[stat] * get(stat);
-};
+		function y(stat) {
+		  center = document.getElementById("canvas").height / 2;
+		  mul = {
+			"dex": 0,
+			"spe": 0.707,
+			"acc": 1,
+			"ini": 0.707,
+			"int": 0,
+			"cha": -0.707,
+			"str": -1,
+			"con": -0.707
+		  };
+		  return center + 18 * mul[stat] * get(stat);
+		};
 
-function draw() {
- canvas = document.getElementById('canvas');
+		function draw() {
+		  canvas = document.getElementById('canvas');
 
- sum = get("str") + get("con") + get("dex") + get("spe") + get("acc") + get("ini") + get("int") + get("cha");
- document.getElementById("total").innerHTML = sum;
+		  sum = get("str") + get("con") + get("dex") + get("spe") + get("acc") + get("ini") + get("int") + get("cha");
+		  document.getElementById("total").innerHTML = sum;
 
- // Draw the background of the chart
- var bg = canvas.getContext('2d');
- bg.drawImage(background, 0, 0, canvas.width, canvas.height);
+		  // Draw the background of the chart
+		  var bg = canvas.getContext('2d');
+		  bg.drawImage(background, 0, 0, canvas.width, canvas.height);
 
- // Draw the dark grey figure
- max = Math.max(get("str") + get("con") + get("dex"),
-                get("spe") + get("acc") + get("ini"),
-                1.5 * (get("int") + get("cha")));
- color = 0x000;
- if (max == get("str") + get("con") + get("dex")) { color += 0xf00; }
- if (max == get("spe") + get("acc") + get("ini")) { color += 0x0f0; }
- if (max == 1.5 * (get("int") + get("cha"))) { color += 0x00f; }
- if (color == 0xfff) { color = 0x555; }
- padding = '';
- for (i = 0 ; i < 3 - color.toString(16).length ; i++) { padding += '0'; }
+		  // Draw the dark grey figure
+		  max = Math.max(get("str") + get("con") + get("dex"),
+						 get("spe") + get("acc") + get("ini"),
+						 1.5 * (get("int") + get("cha")));
+		  color = 0x000;
+		  if (max == get("str") + get("con") + get("dex")) { color += 0xf00; }
+		  if (max == get("spe") + get("acc") + get("ini")) { color += 0x0f0; }
+		  if (max == 1.5 * (get("int") + get("cha"))) { color += 0x00f; }
+		  if (color == 0xfff) { color = 0x555; }
+		  padding = '';
+		  for (i = 0 ; i < 3 - color.toString(16).length ; i++) { padding += '0'; }
 
- var c = canvas.getContext('2d');
+		  var c = canvas.getContext('2d');
 
- c.globalAlpha = 0.5;
- c.fillStyle = '#' + padding + color.toString(16);
- c.beginPath();
- c.moveTo(x("dex"), y("dex"));
- c.lineTo(x("spe"), y("spe"));
- c.lineTo(x("acc"), y("acc"));
- c.lineTo(x("ini"), y("ini"));
- c.lineTo(x("int"), y("int"));
- c.lineTo(x("cha"), y("cha"));
- c.lineTo(x("str"), y("str"));
- c.lineTo(x("con"), y("con"));
- c.lineTo(x("dex"), y("dex"));
- c.closePath();
- c.fill();
- c.globalAlpha = 1.0;
-};
-
+		  c.globalAlpha = 0.5;
+		  c.fillStyle = '#' + padding + color.toString(16);
+		  c.beginPath();
+		  c.moveTo(x("dex"), y("dex"));
+		  c.lineTo(x("spe"), y("spe"));
+		  c.lineTo(x("acc"), y("acc"));
+		  c.lineTo(x("ini"), y("ini"));
+		  c.lineTo(x("int"), y("int"));
+		  c.lineTo(x("cha"), y("cha"));
+		  c.lineTo(x("str"), y("str"));
+		  c.lineTo(x("con"), y("con"));
+		  c.lineTo(x("dex"), y("dex"));
+		  c.closePath();
+		  c.fill();
+		  c.globalAlpha = 1.0;
+		};
         </script>
     </body>
 </html>
