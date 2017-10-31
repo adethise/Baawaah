@@ -1,199 +1,189 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Stats</title>
-	<style>
-		input.stat-field {
-  			width: 3em;
-		}
+        <title>Elysium - Combat Modifiers</title>
 
-		td {
-  	         	padding: 3px;
-		}
+        <style>
+            .container {
+              padding: 10px;
+            }
 
-		#inputs {
-  			width: 200px;
-  			float: left;
-			}
+            input.bonus {
+              width: 3em;
+            }
 
-		#output {
- 			 width: 500px;
- 			 float: left;
-		}
-	</style>
+            table, tr, th, td {
+              table-layout: fixed;
+              margin-right: 10px;
+              margin-top: 3px;
+              height: 30px;
+              width: 100px;
+              text-align: left;
+              empty-cells: hide;
+            }
+
+            #modifiers {
+              display: flex;
+            }
+
+            div.modifier {
+              margin: 10px;
+              width: auto;
+            }
+
+            .modifier > p {
+              padding-bottom: 5px;
+              height: 2.2em;
+            }
+
+            #result {
+              margin-top: 15px;
+            }
+        </style>
     </head>
 
     <body>
-      <table>
-        <tr>
-          <td>
-              <label for="shottype">Shot Type</label>
-          </td>
-          <td>
-            <select id="shot">
-              <option value="1">Normal Shot</option>
-              <option value="2">Suppression Shot</option>
-              <option value="3">Blind Shot Indirect </option>
-              <option value="4">Blind Shot Unknown </option>
-              <option value="5">Blind Suppression Shot </option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td>
-              <label for="stancetype">Stance</label>
-          </td>
-          <td>
-            <select id="stance">
-              <option value="1">Neutral</option>
-              <option value="2">Aim</option>
-              <option value="3">Run</option>
-              <option value="4">Combat</option>
-              <option value="5">Protect</option>
-              <option value="6">Discret</option>
-            </select>
-          </td>
-          <td>
-              <input id="stanceVal" class="stat-field" type="number" value="0">
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label for="weapMal">Weapon Malus</label>
-          </td>
-          <td>
-              <input id="weapMal" class="stat-field" type="number" value="0">
-          </td>
-        </tr>
-      </table>
 
-      <button onclick="update()">Calculate</button>
-      <p>Result: <span id="result"></span> point</p>
+        <div class="container">
+          <div>
+            <form id="permanent-stats">
+              <p>
+                Précision de base :
+                <input id="base-bonus" class="bonus" type="number">
+              </p>
+              <table id="weapon-bonuses">
+                <tr>
+                  <th></th>
+                  <th>Courte</th>
+                  <th>Moyenne</th>
+                  <th>Longue</th>
+                </tr>
+                <tr>
+                  <td>Normal</td>
+                  <td><input id="weapon-short" class="bonus weapon" type="number"></td>
+                  <td><input id="weapon-medium" class="bonus weapon" type="number"></td>
+                  <td><input id="weapon-long" class="bonus weapon" type="number"></td>
+                </tr>
+                <tr>
+                  <td>Multishot</td>
+                  <td><input id="weapon-multi-short" class="bonus weapon" type="number"></td>
+                  <td><input id="weapon-multi-medium" class="bonus weapon" type="number"></td>
+                  <td><input id="weapon-multi-long" class="bonus weapon" type="number"></td>
+                </tr>
+              </table>
+            </form>
+          </div>
 
-      <table>
-        <tr>
-          <td><label for="PC_STR">STR</label></td>
-          <td><span id="PC_STR">0</span></td>
-          <td><label for="EN_STR">STR</label></td>
-          <td><span id="EN_STR">0</span></td>
-        </tr>
-        <tr>
-          <td><label for="PC_CON">CON</label></td>
-          <td><span id="PC_CON">0</span></td>
-          <td><label for="EN_CON">CON</label></td>
-          <td><span id="EN_CON">0</span></td>
-        </tr>
-        <tr>
-          <td><label for="PC_DEX">DEX</label></td>
-          <td><span id="PC_DEX">0</span></td>
-          <td><label for="EN_DEX">DEX</label></td>
-          <td><span id="EN_DEX">0</span></td>
-        </tr>
-        <tr>
-          <td><label for="PC_SPE">SPE</label></td>
-          <td><span id="PC_SPE">0</span></td>
-          <td><label for="EN_SPE">SPE</label></td>
-          <td><span id="EN_SPE">0</span></td>
-        </tr>
-        <tr>
-          <td><label for="PC_ACC">ACC</label></td>
-          <td><span id="PC_ACC">0</span></td>
-          <td><label for="EN_ACC">ACC</label></td>
-          <td><span id="EN_ACC">0</span></td>
-        </tr>
-        <tr>
-          <td><label for="PC_INI">INI</label></td>
-          <td><span id="PC_INI">0</span></td>
-          <td><label for="EN_INI">INI</label></td>
-          <td><span id="EN_INI">0</span></td>
-        </tr>
-        <tr>
-          <td><label for="PC_INT">INT</label></td>
-          <td><span id="PC_INT">0</span></td>
-          <td><label for="EN_INT">INT</label></td>
-          <td><span id="EN_INT">0</span></td>
-        </tr>
-        <tr>
-          <td><label for="PC_CHA">CHA</label></td>
-          <td><span id="PC_CHA">0</span></td>
-          <td><label for="EN_CHA">CHA</label></td>
-          <td><span id="EN_CHA">0</span></td>
-        </tr>
-      </table>
+          <hr>
 
-	 <script>
-   attribut
-   = {
-      "PC_STR": 0,  "EN_STR": 0,
-      "PC_CON": 0,  "EN_CON": 0,
-      "PC_DEX": 0,  "EN_DEX": 0,
-      "PC_SPE": 0,  "EN_SPE": 0,
-      "PC_ACC": 0,  "EN_ACC": 0,
-      "PC_INI": 0,  "EN_INI": 0,
-      "PC_INT": 0,  "EN_INT": 0,
-      "PC_CHA": 0,  "EN_CHA": 0
-   }
-    function modAt(name,mod){
-        attribut[name] = attribut[name] + mod;
-    }
-    function resetAt(){
-      attribut = {
-         "PC_STR": 0,  "EN_STR": 0,
-         "PC_CON": 0,  "EN_CON": 0,
-         "PC_DEX": 0,  "EN_DEX": 0,
-         "PC_SPE": 0,  "EN_SPE": 0,
-         "PC_ACC": 0,  "EN_ACC": 0,
-         "PC_INI": 0,  "EN_INI": 0,
-         "PC_INT": 0,  "EN_INT": 0,
-         "PC_CHA": 0,  "EN_CHA": 0
-      }
-    }
+          <div>
+            <form id="modifiers">
+              <div class="modifier">
+                <p>Bonus de<br>stance</p>
+                <input id="stance-bonus" class="bonus" type="number" value="0">
+              </div>
 
-    function update(){
-        var shotTypeNumber = parseInt(document.getElementById("shot").value);
-        switch(shotTypeNumber){
-          case 1: break;
-          case 2: modAt("PC_ACC",-3); modAt("EN_ACC",-2); break;
-          case 3: modAt("PC_ACC",-5); break;
-          case 4: modAt("PC_ACC",-10); break;
-          case 5: modAt("PC_ACC",-13); modAt("EN_ACC",-2); break;
-        }
-        var stanceNumber = parseInt(document.getElementById("stance").value);
-        var stanceVal    = parseInt(document.getElementById("stanceVal").value);
-        switch(stanceNumber){
-          case 1: break;
-          case 2: modAt("PC_ACC",stanceVal); modAt("PC_SPE",-stanceVal); modAt("PC_INI",1); break;
-          case 3: modAt("PC_SPE",stanceVal); modAt("PC_ACC",-stanceVal); modAt("PC_INI",1); break;
-          case 4: modAt("PC_DEX",1); modAt("PC_STR",1); modAt("PC_INI",1); modAt("PC_ACC",-2); break;
-          case 5: modAt("PC_DEX",2); modAt("PC_CON",2); modAt("PC_SPE",-2); break;
-          case 6: modAt("PC_SPE",-2); break;
+              <div class="modifier">
+                <p>Bonus de<br>compétence</p>
+                <input id="skill-bonus" class="bonus" type="number" value="0">
+              </div>
 
-        }
-        var weapMal    = parseInt(document.getElementById("weapMal").value);
-        modAt("PC_ACC",weapMal);
+              <div class="modifier">
+                <p>Portée</p>
 
+                <input type="radio" name="range" id="range-short" value="short" checked>
+                <label for="range-short">Courte</label><br>
 
-        document.getElementById("PC_STR").innerHTML = attribut["PC_STR"];
-        document.getElementById("PC_CON").innerHTML = attribut["PC_CON"];
-        document.getElementById("PC_DEX").innerHTML = attribut["PC_DEX"];
-        document.getElementById("PC_SPE").innerHTML = attribut["PC_SPE"];
-        document.getElementById("PC_ACC").innerHTML = attribut["PC_ACC"];
-        document.getElementById("PC_INI").innerHTML = attribut["PC_INI"];
-        document.getElementById("PC_INT").innerHTML = attribut["PC_INT"];
-        document.getElementById("PC_CHA").innerHTML = attribut["PC_CHA"];
-        document.getElementById("EN_STR").innerHTML = attribut["EN_STR"];
-        document.getElementById("EN_CON").innerHTML = attribut["EN_CON"];
-        document.getElementById("EN_DEX").innerHTML = attribut["EN_DEX"];
-        document.getElementById("EN_SPE").innerHTML = attribut["EN_SPE"];
-        document.getElementById("EN_ACC").innerHTML = attribut["EN_ACC"];
-        document.getElementById("EN_INI").innerHTML = attribut["EN_INI"];
-        document.getElementById("EN_INT").innerHTML = attribut["EN_INT"];
-        document.getElementById("EN_CHA").innerHTML = attribut["EN_CHA"];
-        // je me demande si les boucles for existe en javascript.. eh j'hardcode pour le moment
-        resetAt();
+                <input type="radio" name="range" id="range-medium" value="medium">
+                <label for="range-medium">Moyenne</label><br>
 
-    }
+                <input type="radio" name="range" id="range-long" value="long">
+                <label for="range-long">Longue</label><br>
+              </div>
 
+              <div class="modifier">
+                <p>Couvert ennemi</p>
+
+                <input type="radio" name="cover" id="cover-none" value="0" checked>
+                <label for="cover-none">Aucun</label><br>
+
+                <input type="radio" name="cover" id="cover-light" value="2">
+                <label for="cover-light">Léger</label><br>
+
+                <input type="radio" name="cover" id="cover-heavy" value="4">
+                <label for="cover-heavy">Lourd</label><br>
+
+                <!--
+                <input type="radio" name="cover" id="cover-total" value="total">
+                <label for="cover-total">Total</label><br>
+                -->
+              </div>
+
+              <div class="modifier">
+                <p>Modificateurs</p>
+
+                <input type="checkbox" id="mod-multishot">
+                <label for="mod-multishot">Multishot</label><br>
+
+                <input type="checkbox" id="mod-suppression">
+                <label for="mod-suppression">Suppression</label><br>
+
+                <input type="checkbox" id="mod-suppressed">
+                <label for="mod-suppressed">Supprimé</label><br>
+
+                <input type="checkbox" id="mod-novision" onclick="novision_clicked(this)">
+                <label for="mod-novision">À l'aveugle</label><br>
+
+                <input type="checkbox" id="mod-blind" disabled>
+                <label for="mod-blind">Position inconnue</label><br>
+              </div>
+            </form>
+          </div>
+
+          <hr>
+
+          <div>
+            <button onclick="compute_resulting_mod()">Calculer le modificateur final</button>
+            <p id="result"></p>
+          </div>
+        </div>
+
+        <script>
+            function novision_clicked(input) {
+              blind_input = document.getElementById("mod-blind");
+              if (input.checked) {
+                blind_input.disabled = false;
+              } else {
+                blind_input.checked = false;
+                blind_input.disabled = true;
+              }
+            }
+
+            function compute_resulting_mod() {
+              var result = 0;
+
+              result += parseInt(document.getElementById("base-bonus").value) || 0;
+
+              range = document.querySelector('input[name="range"]:checked').value;
+              if (document.getElementById("mod-multishot").checked) {
+                result += parseInt(document.getElementById("weapon-multi-" + range).value) || 0;
+              } else {
+                result += parseInt(document.getElementById("weapon-" + range).value) || 0;
+              }
+
+              result += parseInt(document.getElementById("stance-bonus").value) || 0;
+              result += parseInt(document.getElementById("skill-bonus").value) || 0;
+
+              result -= parseInt(document.querySelector('input[name="cover"]:checked').value);
+
+              if (document.getElementById("mod-suppression").checked) result -= 3;
+              if (document.getElementById("mod-suppressed").checked) result -= 2;
+              if (document.getElementById("mod-novision").checked) result -= 5;
+              if (document.getElementById("mod-blind").checked) result -= 5;
+
+              document.getElementById("result").innerHTML = "Bonus final : " + result;
+            }
         </script>
+
     </body>
 </html>
